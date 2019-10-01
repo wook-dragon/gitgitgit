@@ -1,0 +1,63 @@
+/*
+--직원 급여 테이블
+--사번, 이름, 월급, 커미션, 연봉((월급*12)+커미션), 부서코드
+--사번의 데이터는 숫자타입이며 중복되거나 NULL 값을 허용하면 안된다
+--이름 varchar2타입이며 NULL 값을 허용하지 않는다
+--급여는 숫자타입이며 null값을 허용하지 않고
+--커미션은 숫자타입이며 null값을 허용한다
+--커미션  값을 입력하지 않으면  default로 0값을 갖는다
+--연봉 컬럼은 가상컬럼으로(조합컬럼) 생성한다
+--부서코드는 부서 테이블에 부서코드를 참조한다
+---------------------------------------------------
+--부서 테이블
+--부서코드 , 부서명
+
+--부서코드 데이터는 숫자타입이며 중복되거나 NULL 값을 허용하면 안된다,
+--부서명 은 null값을 허락하지 않는다
+----------------------------------------------------
+--그리고 select 결과는
+--사번 , 이름  월급, 연봉 , 부서코드 , 부서명 을 출력하세요
+*/
+create table depp(
+ decode number,
+ dname varchar2(20) not null
+);
+
+create table esss(
+ empnum number,
+ empname varchar2(20) not null,
+ empsal number not null,
+ empcomm number default 0,
+ empannualsal number GENERATED ALWAYS as ((empsal*12)+empcomm) VIRTUAL,
+ decode number
+);
+
+alter table esss 
+add constraint pk_esss_decode primary key(decode);
+
+alter table depp 
+add constraint pk_depp_decode primary key(decode);
+
+alter table esss 
+add constraint fk_esss_decode foreign key (decode) references depp(decode); 
+
+insert into depp (decode, dname) values (1234,'인사과');
+insert into depp (decode, dname) values (5678,'총무과');
+insert into depp (decode, dname) values (9101,'회계과');
+insert into depp (decode, dname) values (1112,'세무과');
+
+
+insert into esss (empnum,empname,empsal,empcomm,decode) 
+values (0000,'김수연',1000,1000,1234);
+insert into esss (empnum,empname,empsal,empcomm,decode) 
+values (1111,'양찬식',1000,1000,5678);
+insert into esss (empnum,empname,empsal,empcomm,decode) 
+values (2222,'이용욱',1000,1000,9101);
+insert into esss (empnum,empname,empsal,empcomm,decode) 
+values (3333,'이하연',1000,1000,1112);
+commit;
+select * from esss;
+
+select e.empnum, e.empname,e.empsal, e.empannualsal, e.decode, d.dname
+from esss e join depp d 
+on e.decode = d.decode;
