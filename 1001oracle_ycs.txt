@@ -1,0 +1,54 @@
+-- 10 01 문제
+--직원 급여 테이블
+--사번, 이름, 월급, 커미션, 연봉((월급*12)+커미션), 부서코드
+
+--사번의 데이터는 숫자타입이며 중복되거나 NULL 값을 허용하면 안된다
+--이름 varchar2타입이며 NULL 값을 허용하지 않는다
+--급여는 숫자타입이며 null값을 허용하지 않고
+--커미션은 숫자타입이며 null값을 허용한다
+--커미션  값을 입력하지 않으면  default로 0값을 갖는다
+--연봉 컬럼은 가상컬럼으로(조합컬럼) 생성한다
+--부서코드는 부서 테이블에 부서코드를 참조한다
+create table department(
+  dcode number(20),
+  dname varchar2(20)
+)
+alter table department
+add constraint pk_department_dcode primary key(dcode)
+modify(dname not null);
+
+create table esal(
+  empno number,
+  name varchar2(20), 
+  salary number,
+  commission number default 0,
+  ai number GENERATED ALWAYS as (salary+commission) VIRTUAL,
+  dcode number
+);
+
+alter table esal
+add constraint pk_esal_empno primary key(empno)
+modify(name not null);
+
+alter table esal
+add constraint fk_esal_dcode foreign key(dcode) references department(dcode);
+
+insert into department(dcode,dname)
+values(1, '인사과');
+insert into department(dcode,dname)
+values(2, '보안과');
+insert into department(dcode,dname)
+values(3, '기획과');
+insert into department(dcode,dname)
+values(4, '개발과');
+select * from department;
+
+insert into esal(empno,name,salary,commission,dcode)
+values(001, '양찬식', 99999, 9999, 2);
+insert into esal(empno,name,salary,commission,dcode)
+values(002, '김수연', 9999, 19999, 3);
+
+select e.empno, e.name, e.salary, e.dcode, d.dname
+from department d join esal e
+on d.dcode = e.dcode;
+
