@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>inyoung starbucks</title>
+	<style>
+    @import url(web.css) screen and (min-width: 700px) and (max-width: 1024px);
+    @import url(mobile.css) screen and (min-width: 152px) and (max-width: 400px);
+		
+		* {
+  box-sizing: border-box;
+     }
+
+	 
+		a:link {
+			color: dimgrey;
+			background-color: transparent;
+			text-decoration: none;
+		}
+
+		a:visited {
+			color: gray;
+			background-color: transparent;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: green;
+			background-color: transparent;
+			text-decoration: underline;
+
+		}
+
+		a:active {
+			color: orange;
+			background-color: transparent;
+			text-decoration: underline;
+		}
+
+
+		.starbucks {
+			width : 5%;
+			position: fixed;
+			top :4%;
+			left :14%;
+		}
+			
+		.top {
+			border-top:3px solid black;
+			border-bottom :1px solid lightgray;
+			background-color: Gainsboro  ;
+			color: dimgrey;
+			font-size : 13px;
+			text-align: right;
+			padding: 14%;
+			padding-bottom :23px;
+			padding-top:2px; 
+		}
+		
+		.top a {
+			margin-right:1%;
+			margin-left:1%;
+		}
+
+		.else {
+			background-color: white;
+			color: black;
+			padding :14%;
+			padding-top:1%;
+		}
+
+		.else p {
+			color: grey;
+			float:right;
+			font-size:12px;
+		}
+		
+		.category { /*분류보기*/
+			border: 1px solid lightgrey;
+			padding: 2%;
+			border-radius: 3px;
+			clear: both;
+		}
+		
+
+		.category1 {
+			display: inline-block;
+			background-color: #006633;
+			width: 200px;
+			height: 30px;
+			color: white;
+			text-align: center;
+			padding-top: 0.5%;
+			font-size: 13px;
+			float: left;
+			margin-right: 5px;
+			border-radius: 5px;
+		}
+
+		.category2 {
+			display: inline-block;
+			background-color: #f4f4f1;
+			width: 200px;
+			height: 30px;
+			color: black;
+			text-align: center;
+			padding-top: 0.5%;
+			font-size: 13px;
+			float: left;
+   			 border-radius: 5px;
+		}
+
+		.else form {
+			font-size: 14px;
+			color: dimgrey;
+			vertical-align: middle;
+		}
+
+		.category3 { /*사진으로보기*/
+			display: inline-block;
+			border: 1px solid #E0E0D1;
+			background-color: #666;
+			min-width: 200px;   /*다시해보기*/
+			height: 30px;
+			color: white;
+			text-align: center;
+			padding-top:0.5%;
+			font-size: 11px;
+			float: left;
+			margin-right: 5px;
+			border-radius: 5px;
+		}
+
+		.category4 { /*영양정보로 보기*/
+			display: inline-block;
+			border: 1px solid #E0E0D1;
+			background-color: white;
+			width: 15%;
+			height: 30px;
+			color: dimgrey;
+			text-align: center;
+			padding-top:0.7%;
+			font-size: 11px;
+			float: left;
+			margin-right: 5px;
+			border-radius: 5px;
+		}
+
+		select{
+			width : 25%;
+			padding : 6px 6px;
+			border-radius: 5px;
+			border: 1px solid #E0E0D1;
+			-moz-appearance: none;
+			color: gray;
+			float:right;
+		}
+
+		.bakery {
+			background-color: GhostWhite; 
+			clear: left;
+			border: 1px solid GhostWhite;
+			border-radius: 5px;
+			margin-top:5%;
+			margin-bottom:2%;
+			padding-left:2%;
+		}
+
+		.foodcontainer:after{
+ 			clear: both; display: block; content: '' 
+			 padding:10%;
+			
+		}
+
+		.bakeimg{
+			width: 24%;
+			float:left;
+			margin-right:1%;
+			margin-bottom:5%
+		}		
+		
+		@media only screen and (max-width:620px) {
+  			/* For mobile phones: */
+  			.bakeimg {
+   			width:100%;
+ 			 }
+}
+		
+
+		
+	</style>
+</head>
+
+
+<body>
+
+	<div class="top">
+	<image class="starbucks" alt="starbugs_logo" src="https://dbscthumb-phinf.pstatic.net/2750_000_1/20140227102809567_77T73DFUJ.jpg/brand44_i1.jpg?type=m250&wm=N">
+	
+	<!-- 	sign in   |    My Starbucks   |   Customer Service & Ideas    |   Find a Store -->
+	<p>
+	<a href="https://www.istarbucks.co.kr/login/login.do">sign in</a>   |
+	<a href="https://www.istarbucks.co.kr/login/login.do?redirect_url=%2Fmy%2Findex.do"> My Starbucks</a>   |
+	<a href="https://www.istarbucks.co.kr/util/index.do">Customer Service & Ideas</a>   |
+	<a href="https://www.istarbucks.co.kr/store/store_map.do">Find a Store</a>   |
+	<image class="see" alt="search" src="https://image.istarbucks.co.kr/common/img/common/icon_magnifier_black.png">
+	</p>
+	<br>
+	
+	<a href="https://www.istarbucks.co.kr/coffee/index.do">COFFEE</a>   
+	<a href="https://www.istarbucks.co.kr/menu/index.do">MENU</a>
+	<a href="https://www.istarbucks.co.kr/store/index.do">STORE </a> 
+	<a href="https://www.istarbucks.co.kr/responsibility/index.do">RESPONSIBILITY</a> 
+	<a href="https://www.istarbucks.co.kr/msr/index.do">MY STARBUCKS</a>  
+	<a href="https://www.istarbucks.co.kr/whats_new/index.do">WHAT'S NEWS</a>
+	
+	  
+	  </div>
+
+	<div class="else">
+		<h2>푸드</h2>
+		<p>
+		<image alt="star1" src="https://image.istarbucks.co.kr/common/img/common/icon_home.png"> > MENU > 푸드
+		</p>
+		<br>
+		<div class="category">
+			<h3>분류보기</h3>
+			<hr>
+			<br>
+			<div class="category1">카테고리</div>
+			<div class="category2">테마</div>
+			<br> <br> <br>
+			<form action="">
+				<input type="checkbox" name="sports_1" value="A" checked="checked">전체 상품보기 
+				<input type="checkbox" name="sports_2" value="B">베이커리
+				 <input type="checkbox" name="sports_3" value="C"> 케이크
+				  <input type="checkbox" name="sports_2" value="B"> 샌드위치 & 샐러드 
+				  <input type="checkbox" name="sports_3" value="C"> 따뜻한 푸드
+					 <input type="checkbox" name="sports_2" value="B"> 과일 & 요거트 
+					<input type="checkbox" name="sports_3" value="C"> 스낵 & 미니 디저트 
+					<input type="checkbox" name="sports_3" value="C"> 아이스크림
+		</div> <!-- class category-->
+		<br>
+		
+		<div>
+		<div class="category3">사진으로 보기</div>
+		<div class="category4">영양정보로 보기</div>
+		
+
+
+			<select class= name ="year" title="상세분류">
+			<option value="상세분류" selected disabled hidden>상세분류</option>
+				
+				<option value="신규 출시된 메뉴">신규 출시된 메뉴</option>
+				<option value="한정기간 출시되는 시즌성 메뉴">한정기간 출시되는 시즌성 메뉴</option>	
+				<option value="프리미엄 푸드 매장 전용 메뉴">프리미엄 푸드 매장 전용 메뉴</option>	
+			</select>
+			
+		</div>
+		
+		
+		
+		<div class="bakery">
+		<h3>베이커리</h3>
+		</div>
+		
+		
+		
+		<div class="foodcontainer">  <!-- 사진리스트 -->
+		<image class="bakeimg" alt="star1" src="https://image.istarbucks.co.kr/upload/store/skuimg/2019/07/[9300000002227]_20190711130912353.jpg">
+		<image class="bakeimg" alt="star2" src="https://image.istarbucks.co.kr/upload/store/skuimg/2019/07/[9300000002226]_20190711130955314.jpg">
+		<image class="bakeimg" alt="star3" src="https://image.istarbucks.co.kr/upload/store/skuimg/2019/09/[9300000002299]_20190917154017344.jpg">
+		<image class="bakeimg" alt="star4" src="https://image.istarbucks.co.kr/upload/store/skuimg/2019/07/[9300000002225]_20190711131045701.jpg">
+		
+		</div>
+		
+		<div class="foodcontainer">  <!-- 사진리스트 -->
+		<image class="bakeimg" alt="star1" src="https://image.istarbucks.co.kr/upload/store/skuimg/2019/09/[9300000002295]_20190917153532115.jpg">
+		<image class="bakeimg" alt="star2" src="https://image.istarbucks.co.kr/upload/store/skuimg/2018/05/[9300000001538]_20180528125435774.jpg">
+		<image class="bakeimg" alt="star3" src="https://image.istarbucks.co.kr/upload/store/skuimg/2018/05/[9300000001555]_20180509163652737.jpg">
+		<image class="bakeimg" alt="star4" src="https://image.istarbucks.co.kr/upload/store/skuimg/2018/05/[9300000001554]_20180509163415406.jpg">
+		
+		</div>
+
+
+
+
+
+</body>
+</html>
