@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>개인소개페이지</title>
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+span {
+    border-bottom: 2px solid dimgray ;
+    font-size :20px;
+    margin-bottom:15px;
+}
+
+p {
+    margin-top:20px;
+}
+
+ul.demo {
+  list-style-type: none;
+  margin: 10px 10px 30px 0px;
+  padding: 0;
+}
+
+li {
+    padding-bottom:10px;
+}
+
+
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+
+
+
+</style>
+
+<body>
+   <div class="container">  
+      <div class="row" style="height:290px">
+         <div class="col-sm" style="background-color: darkslategrey; padding-top: 30px; border-bottom: 1px solid darkslategrey;" >  
+            <div style="text-align: center; height:150px">
+         <img src="images/2.jpg" class="rounded-circle"  alt="group3" width="170px" height="170px">  <!-- 1. 사진(개인캐릭터)-->
+         <br>
+         <h3 style="text-align: center; margin-top:15px; color:whitesmoke"><strong>BAE IN YOUNG</strong></h3>  <!-- 2. 이름-->
+         <h5 style="text-align: center; color: lightslategrey"><strong>KATIE</strong></h5> <!-- 3. 영어이름-->
+            </div>
+        </div>
+      </div>
+
+      <div class="row" style="height:1000px;">
+         <div class="col-sm-3" style="text-align:left; color:grey; padding-top: 3%; border-right: 1px solid darkslategrey;">
+         
+         <span><strong>PERSONAL PROFILE</strong></span> 
+        <ul class="demo">
+            <li>· name :</li> <!-- 4. 이름-->
+            <li>· age :</li> <!-- 5. 나이 -->
+        </ul>
+        <br>
+         <span><strong>CONTACT</strong></span>
+
+         <ul class="demo">
+                <li class="glyphicon glyphicon-user"> github :</li><br>  <!-- 6. 깃허브주소 -->
+                <li class="glyphicon glyphicon-envelope"> e-mail : </li><br>  <!-- 7. 이메일주소 -->
+                <li class="glyphicon glyphicon-phone"> mobile :</li><br> <!-- 8. 핸드폰번호 -->
+                <li class="glyphicon glyphicon-home"> address : </li><br> <!-- 9. 주소 -->
+         
+
+            </ul>
+         </div>
+         <div class="col-sm-9" style="background-color:#f7fbfc; padding-top:10px;">
+                <div id="accordion" style="margin: 25px;">
+                 <div class="card" >
+                   <div class="card-header" >
+                     <a class="card-link" data-toggle="collapse" href="#collapseOne" style="color:dimgray">
+                             <strong>Favorite Things</strong>
+                     </a>
+                   </div>
+                   <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                     <div class="card-body">  <!-- 10. 좋아하는것 사진 3개 -->   <!--img src부분만 넣으세요!!! alt/width/height 수정금지-->
+                        <img src="images/iphone.jpg"   alt="group3" width="180px" height="230px">
+                        <img src="images/ipad.jpg"   alt="group3" width="180px" height="230px">
+                        <img src="images/mac.jpg"   alt="group3" width="180px" height="230px">
+                        <img src="images/mac.jpg"   alt="group3" width="180px" height="230px">
+                     </div>
+                   </div>
+                 </div>
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo" style="color:dimgray">
+                     <strong>Inspired Movie & soap</strong>
+                  </a>
+                  </div>
+                  <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">  <!-- 11. 영감받은 영화 or 드라마 사진 3개 --> <!--img src부분만 넣으세요!!! alt/width/height 수정금지-->
+                        <img src="images/Avengers.jpg"   alt="group3" width="180px" height="230px">
+                        <img src="images/world.jpg"   alt="group3" width="180px" height="230px">
+                        <img src="images/my.jpg"   alt="group3" width="180px" height="230px">
+                        <img src="images/my.jpg"   alt="group3" width="180px" height="230px">
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree" style="color:dimgray">
+                        <strong>Travel City</strong>
+                    </a>
+                  </div>
+                  <div id="collapseThree" class="collapse" data-parent="#accordion">
+                    <div class="card-body"> <!-- 12. 여행지 좋았던 곳 사진 3개 --> <!--img src부분만 넣으세요!!! alt/width/height 수정금지-->
+                        <img src="images/newyork.jpg"   alt="group3" width="180px" height="230px">
+                        <img src="images/london.jpg"   alt="group3" width="180px" height="230px">
+                        <img src="images/paris.jpg"   alt="group3" width="180px" height="230px">
+                        <img src="images/paris.jpg"   alt="group3" width="180px" height="230px">
+                    </div>
+                  </div>
+                </div>
+              </div>         
+         </div>
+         
+      </div>
+      
+   </div>
+</body>
+</html>
